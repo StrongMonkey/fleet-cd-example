@@ -1,0 +1,25 @@
+name: push
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  apply:
+    env:
+      KUBECONFIG_SECRET: ${{ secrets.kubeconfig }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: set kubeconfig
+      uses: azure/k8s-actions/k8s-set-context@master
+      with:
+        kubeconfig: ${{ secrets.kubeconfig }}
+      id: login
+    - name: download fleet manager cli
+      run: |-
+        mkdir -p bin
+        curl -sfL https://github.com/StrongMonkey/fleet/releases/download/v0.0.0.-test/flt > ./bin/flt && chmod +x ./bin/flt
+    - name: Run fleet apply
+      run: |
+        ./bin/flt apply
