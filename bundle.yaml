@@ -8,6 +8,8 @@ targets:
   # note that this directory is relate to ./kustomize
   kustomizeDir: production
 
+ invalid input
+
 - name: staging
   clusterSelector:
     matchLabels:
