@@ -39,3 +39,6 @@ jobs:
     - name: Fleet test
       uses: StrongMonkey/flt-test@v0.0.1
 ```
+
+
+To check out these two github actions, go to https://github.com/marketplace/actions/fleet-apply and https://github.com/marketplace/actions/fleet-test
