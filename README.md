@@ -23,6 +23,8 @@ jobs:
       uses: StrongMonkey/flt-apply@v0.0.1
 ```
 
+Note: you have to add base64 encoded kubeconfig that points to your fleet manager cluster as a github secret. To see how a secret can be added in github repo, check https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets.
+
 To automatically test if your bundle files are valid on any pull request, create `./github/workflows/pull.yaml` workflow:
 
 ```yaml
@@ -41,4 +43,4 @@ jobs:
 ```
 
 
-To check out these two github actions, go to https://github.com/marketplace/actions/fleet-apply and https://github.com/marketplace/actions/fleet-test
+To check out these two github actions, go to https://github.com/marketplace/actions/fleet-apply and https://github.com/marketplace/actions/fleet-test. 
