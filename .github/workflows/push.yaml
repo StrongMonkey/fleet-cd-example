@@ -6,7 +6,7 @@ on:
 jobs:
   apply:
     env:
-      KUBECONFIG: ${{ secrets.kubeconfig }}
+      KUBECONFIG_SECRET: ${{ secrets.kubeconfig }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
