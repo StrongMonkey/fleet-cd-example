@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Fleet test
-      uses: StrongMonkey/flt-test@v0.0.1
+      uses: StrongMonkey/flt-test@v0.0.2
