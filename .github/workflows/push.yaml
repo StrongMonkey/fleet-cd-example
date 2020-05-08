@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Fleet apply
-      uses: StrongMonkey/flt-apply@v0.0.2
+      uses: StrongMonkey/flt-apply@v0.0.3
